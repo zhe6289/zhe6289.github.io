@@ -1,5 +1,10 @@
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+ 
+button:focus {
+    outline: none;
+    outline: none;
+  }
 
 
 @import "../sass/customVariable";

@@ -10560,4 +10560,9 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+
+button:focus {
+  outline: none;
+  outline: none;
+}
 /*# sourceMappingURL=customize.css.map */
