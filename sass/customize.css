@@ -10565,4 +10565,37 @@ button:focus {
   outline: none;
   outline: none;
 }
+
+.bg-black {
+  background: rgba(0, 0, 0, 0.74);
+}
+
+.page-footer .row {
+  color: white;
+}
+
+.page-footer .row .col-md-3 a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #919191;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.page-footer .row .col-md-3 a:hover {
+  color: white;
+}
+
+.footer-copyright {
+  color: white;
+}
+
+.footer-copyright a {
+  text-decoration: none;
+  color: #919191;
+}
+
+.footer-copyright a:hover {
+  color: white;
+}
 /*# sourceMappingURL=customize.css.map */

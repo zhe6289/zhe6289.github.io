@@ -6,9 +6,42 @@ button:focus {
     outline: none;
   }
 
+  // footer
+  .bg-black{
+        background: rgba(0, 0, 0, 0.74);
+      }
+    .page-footer{
+      .row{
+        color: white;
+        .col-md-3{
+          a{
+            cursor: pointer;
+            text-decoration: none;
+            color: #919191;
+            transition:all 0.3s ease;
+            &:hover{
+              color: white;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-copyright{
+      color: white;
+        a{
+          text-decoration: none;
+          color: #919191;
+            &:hover{
+              color: white;
+            }
+          }
+    }
 
 @import "../sass/customVariable";
-    
+
+  
+
 
 
 

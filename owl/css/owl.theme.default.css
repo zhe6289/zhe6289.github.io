@@ -35,7 +35,7 @@
 
 .owl-theme .owl-dots {
   width: 100%;
-  position: absolute;
+  position: relative;
   /* top: 85%; */
   left: 30%;
   transform: translate(-50% , -50%);
