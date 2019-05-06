@@ -8,12 +8,13 @@
     <title>FriendShip</title>
     <link rel="stylesheet" href="sass/customize.css">
     <link rel="stylesheet" href="owl/css/owl.carousel.css">
-    <link rel="stylesheet" href="owl/css/owl.theme.default.css">    <style>
+    <link rel="stylesheet" href="owl/css/owl.theme.default.css">
+    <style>
         body {
             background: rgb(43, 43, 43);
         }
 
-        .title h1{
+        .title h1 {
             color: white;
         }
 
@@ -24,7 +25,7 @@
 </head>
 
 <body>
-    <div class="title text-center my-1">
+    <div class="title text-center my-2">
         <h1>Friendship Stationary</h1>
     </div>
     <nav class="container mt-1">
@@ -52,7 +53,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Service</a>
+                        <a class="nav-link" href="service.html">Service</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
@@ -92,8 +93,12 @@
         </div> -->
         <div class="owl-carousel owl-theme">
             <img src="images/banner1.jpg" alt="">
-            <img src="images/banner2.jpg" alt="">
-            <img src="images/banner3.jpg" alt="">
+            <a href="service.html" target="_blank">
+                <img src="images/banner2-edited.jpg" alt="">
+            </a>
+            <a href="service.html" target="_blank">
+                <img src="images/banner3-edited.jpg" alt="">
+            </a>
         </div>
     </nav>
 
@@ -107,9 +112,9 @@
             $('.owl-carousel').owlCarousel({
                 loop: true,
                 autoplay: true,
-                autoplayTimeout:5000,
-                autoplaySpeed:2000,
-                dots:true,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 2000,
+                dots: true,
                 responsive: {
                     0: {
                         items: 1
