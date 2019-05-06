@@ -1,0 +1,22 @@
+{
+  "name": "friendship.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhe6289/friendship.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhe6289/friendship.github.io/issues"
+  },
+  "homepage": "https://github.com/zhe6289/friendship.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}
