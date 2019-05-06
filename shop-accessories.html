@@ -7,6 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FriendShip</title>
     <link rel="stylesheet" href="sass/customize.css">
+    <style>
+        a.card {
+            text-decoration: none;
+            color: black;
+            margin-bottom: 15px;
+        }
+
+        a.card:hover img {
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,7 +27,6 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -28,7 +38,7 @@
                         Shop
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="shop-notebook.html">NoteBook</a>
+                        <a class="dropdown-item" href="shop-pens.html">Pens</a>
                         <a class="dropdown-item" href="shop-accessories.html">Accessories</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="shop.html">All Items</a>
@@ -48,182 +58,126 @@
         </div>
     </nav>
 
-    <div class="container-fluid section-a">
-        <div class="card-deck">
-            <div class="card">
-                <img class="card-img-top"
-                    src="https://static.wixstatic.com/media/84770f_1c0aba29b8c640efb5866dd144239046~mv2_d_3200_3200_s_4_2.jpg/v1/fill/w_404,h_404,al_c,q_80,usm_0.66_1.00_0.01/84770f_1c0aba29b8c640efb5866dd144239046~mv2_d_3200_3200_s_4_2.webp"
-                    alt="Card image cap">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Envelope</h5>
-                    <p class="card-text">
-                        Grid Style
-                    </p>
-                    <h1>RM0.50</h1>
-                </div>
-                <div class="card-footer text-center">
-                    <a href="#" class="text-muted">Add To Cart</a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top"
-                    src="https://static.wixstatic.com/media/84770f_4b0d7d52dc684557bcf850796be1782b~mv2_d_5338_4860_s_4_2.jpg/v1/fill/w_404,h_404,al_c,q_80,usm_0.66_1.00_0.01/84770f_4b0d7d52dc684557bcf850796be1782b~mv2_d_5338_4860_s_4_2.webp"
-                    alt="Card image cap">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Pencil Box</h5>
-                    <p class="card-text">Blue ear Rabbit</p>
-                    <h1>RM3.00</h1>
-                </div>
-                <div class="card-footer text-center">
-                    <a href="#" class="text-muted">Add To Cart</a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top"
-                    src="https://static.wixstatic.com/media/84770f_5df8a77e7e0342a087c788e52869bd41~mv2_d_3200_3200_s_4_2.jpg/v1/fill/w_404,h_404,al_c,q_80,usm_0.66_1.00_0.01/84770f_5df8a77e7e0342a087c788e52869bd41~mv2_d_3200_3200_s_4_2.webp"
-                    alt="Card image cap">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Envelope</h5>
-                    <p class="card-text">Ocean Wave</p>
-                    <h1>RM0.50</h1>
-                </div>
-                <div class="card-footer text-center">
-                    <a href="#" class="text-muted">Add To Cart</a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top"
-                    src="https://static.wixstatic.com/media/84770f_9aeee5aaf23341a0b999023e7e5d99ac~mv2_d_3200_3200_s_4_2.jpg/v1/fill/w_404,h_404,al_c,q_80,usm_0.66_1.00_0.01/84770f_9aeee5aaf23341a0b999023e7e5d99ac~mv2_d_3200_3200_s_4_2.webp"
-                    alt="Card image cap">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Pen</h5>
-                    <p class="card-text">Rollerball Pen</p>
-                    <h1>RM5.50</h1>
-                </div>
-                <div class="card-footer text-center">
-                    <a href="#" class="text-muted">Add To Cart</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid section-b">
-        <div class="card-deck">
-                <div class="card">
-                        <img class="card-img-top"
-                            src="https://static.wixstatic.com/media/84770f_c1330e92b418419f9a1de58cc25f740a~mv2_d_3684_3354_s_4_2.jpg/v1/fill/w_404,h_404,al_c,q_80,usm_0.66_1.00_0.01/84770f_c1330e92b418419f9a1de58cc25f740a~mv2_d_3684_3354_s_4_2.webp"
-                            alt="Card image cap">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Clips</h5>
-                            <p class="card-text">Binder Clip</p>
-                            <h1>RM1.50</h1>
-                        </div>
-                        <div class="card-footer text-center">
-                            <a href="#" class="text-muted">Add To Cart</a>
-                        </div>
+    <div class="container">
+        <h1 class="my-3 text-center"> Accessories</h1>
+        <div class="row">
+            <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
+                <a href="#" class="card">
+                    <img class="card-img-top" src="images/ass1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Eraser(Clay)</h5>
+                        <p class="card-text" style="height: 120px">Super soft texture does not hurt paper
+                            <br>Suitable for 2B sketches.
+                        </p>
                     </div>
-                    <div class="card">
-                        <img class="card-img-top"
-                            src="https://static.wixstatic.com/media/84770f_5626a32044994b4cac65a4749b4d75f9~mv2_d_3200_3200_s_4_2.jpg/v1/fill/w_404,h_404,al_c,q_80,usm_0.66_1.00_0.01/84770f_5626a32044994b4cac65a4749b4d75f9~mv2_d_3200_3200_s_4_2.webp"
-                            alt="Card image cap">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Ruler</h5>
-                            <p class="card-text">20CM Stainless Steel Ruler</p>
-                            <h1>RM2.80</h1>
-                        </div>
-                        <div class="card-footer text-center">
-                            <a href="#" class="text-muted">Add To Cart</a>
-                        </div>
+                    <div class="card-footer">
+                        <div>RM19.90</div>
                     </div>
-                    <div class="card">
-                        <img class="card-img-top"
-                            src="https://static.wixstatic.com/media/eb38e1f7bb9e44119caaeb05956053c7.jpg/v1/fill/w_404,h_404,al_c,q_80,usm_0.66_1.00_0.01/eb38e1f7bb9e44119caaeb05956053c7.webp"
-                            alt="Card image cap">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Pencil</h5>
-                            <p class="card-text">Colorful Pencil - 01</p>
-                            <h1>RM5.90</h1>
-                        </div>
-                        <div class="card-footer text-center">
-                            <a href="#" class="text-muted">Add To Cart</a>
-                        </div>
+                </a>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
+                <a href="#" class="card">
+                    <img class="card-img-top" src="images/ass2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">L-hanging plastic wipe</h5>
+                        <p class="card-text" style="height: 120px">
+                            Avoid rubbing the skin like a skin or slamming it hard
+                            <br> Scientists recommend using a plastic wipe.
+                        </p>
                     </div>
-                    <div class="card">
-                        <img class="card-img-top"
-                            src="https://static.wixstatic.com/media/84770f_1097944aab6a4386817b0d946902d830~mv2_d_3200_3200_s_4_2.jpg/v1/fill/w_404,h_404,al_c,q_80,usm_0.66_1.00_0.01/84770f_1097944aab6a4386817b0d946902d830~mv2_d_3200_3200_s_4_2.webp"
-                            alt="Card image cap">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Pencil</h5>
-                            <p class="card-text">Colorful Pencil - 02</p>
-                            <h1>RM5.90</h1>
-                        </div>
-                        <div class="card-footer text-center">
-                            <a href="#" class="text-muted">Add To Cart</a>
-                        </div>
+                    <div class="card-footer">
+                        <div>RM19.90</div>
                     </div>
-        </div>
-    </div>
-
-    <div class="container-fluid section-c">
-        <div class="card-deck">
-            <div class="card">
-                <img class="card-img-top"
-                    src="https://static.wixstatic.com/media/84770f_48e72b3b0e4549329994d17dd2ed98f4~mv2_d_3200_3200_s_4_2.jpg/v1/fill/w_404,h_404,al_c,q_80,usm_0.66_1.00_0.01/84770f_48e72b3b0e4549329994d17dd2ed98f4~mv2_d_3200_3200_s_4_2.webp"
-                    alt="Card image cap">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Pen</h5>
-                    <p class="card-text">Rollerball Pen</p>
-                    <h1>RM5.50</h1>
-                </div>
-                <div class="card-footer text-center">
-                    <a href="#" class="text-muted">Add To Cart</a>
-                </div>
+                </a>
             </div>
-            <div class="card">
-                <img class="card-img-top"
-                    src="https://static.wixstatic.com/media/84770f_0b39828e65ee4da7a7c3928b21f22141~mv2_d_3684_3354_s_4_2.jpg/v1/fill/w_404,h_404,al_c,q_80,usm_0.66_1.00_0.01/84770f_0b39828e65ee4da7a7c3928b21f22141~mv2_d_3684_3354_s_4_2.webp"
-                    alt="Card image cap">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Puzzle</h5>
-                    <p class="card-text">Paper Puzzle</p>
-                    <h1>RM1.50</h1>
-                </div>
-                <div class="card-footer text-center">
-                    <a href="#" class="text-muted">Add To Cart</a>
-                </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
+                <a href="#" class="card">
+                    <img class="card-img-top" src="images/ass3.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">FaberCastel Clay</h5>
+                        <p class="card-text" style="height: 120px">Good to Pull
+                            <br>Leaves no trace</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>RM19.90</div>
+                    </div>
+                </a>
             </div>
-            <div class="card">
-                <img class="card-img-top"
-                    src="https://static.wixstatic.com/media/84770f_58c20585634f434ea4c06663af21677f~mv2_d_3200_3200_s_4_2.jpg/v1/fill/w_404,h_404,al_c,q_80,usm_0.66_1.00_0.01/84770f_58c20585634f434ea4c06663af21677f~mv2_d_3200_3200_s_4_2.webp"
-                    alt="Card image cap">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Pencil</h5>
-                    <p class="card-text">Colorful-penil-03</p>
-                    <h1>RM3.00</h1>
-                </div>
-                <div class="card-footer text-center">
-                    <a href="#" class="text-muted">Add To Cart</a>
-                </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
+                <a href="#" class="card">
+                    <img class="card-img-top" src="images/ass4.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">FaberCastel Clay(Blue)</h5>
+                        <p class="card-text" style="height: 120px">Good to Pull
+                            <br> Leaves no trace </p>
+                    </div>
+                    <div class="card-footer">
+                        <div>RM19.90</div>
+                    </div>
+                </a>
             </div>
-            <div class="card">
-                <img class="card-img-top"
-                    src="https://static.wixstatic.com/media/84770f_59cbb716cdee4221bb8ca4cbf0c36af3~mv2_d_3200_3200_s_4_2.jpg/v1/fill/w_404,h_404,al_c,q_80,usm_0.66_1.00_0.01/84770f_59cbb716cdee4221bb8ca4cbf0c36af3~mv2_d_3200_3200_s_4_2.webp"
-                    alt="Card image cap">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Ruler</h5>
-                    <p class="card-text">Styled Ruler</p>
-                    <h1>RM3.00</h1>
-                </div>
-                <div class="card-footer text-center">
-                    <a href="#" class="text-muted">Add To Cart</a>
-                </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
+                <a href="#" class="card">
+                    <img class="card-img-top" src="images/ass5.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Pen Holder</h5>
+                        <p class="card-text" style="height: 120px">Italian grain leather pen set long
+                        <br>Material: leather (cowhide)
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <div>RM24.90</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
+                <a href="#" class="card">
+                    <img class="card-img-top" src="images/ass6.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Pen Holder</h5>
+                        <p class="card-text" style="height: 120px">Italian grain cowhide single pen set
+                        <br>Material: leather (cowhide)
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <div>RM24.90</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
+                <a href="#" class="card">
+                    <img class="card-img-top" src="images/ass7.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Eraser Filter</h5>
+                        <p class="card-text" style="height: 120px"> 
+                            Dual-use pen, 
+                            <br> BASIC,
+                            <br> Ambition\ONDORO, 
+                            <br> rotary pencil.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <div>RM24.90</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
+                <a href="#" class="card">
+                    <img class="card-img-top" src="images/ass8.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Pencil Gift Box</h5>
+                        <p class="card-text" style="height: 120px">Product content : <br> UFO eraser B, <br> GRIP pencil two</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>RM24.90</div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
 
     <script src="js/jquery-3.4.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
 </body>
 
 </html>
