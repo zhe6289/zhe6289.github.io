@@ -52,8 +52,17 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <input onkeyup="myFunction()" id="myInput" class="form-control mr-sm-2" type="search"
+                    placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <ul id="myUL">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Product</a></li>
+                    <li><a href="shop-pens.html">Pen</a></li>
+                    <li><a href="shop-accessories.html">accessories</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="https://www.facebook.com/yuzhe.chua.7" target="_blank">Contact</a></li>
+                </ul>
             </form>
         </div>
     </nav>
@@ -186,41 +195,44 @@
     </div>
 
     <footer class="page-footer pt-2 bg-black">
-            <div class="container-fluid text-center text-md-left">
-                <div class="row">
-                    <div class="col-md-3">
-                            <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127482.66722761809!2d101.61694869747974!3d3.1386749707281956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49c701efeae7%3A0xf4d98e5b2f1c287d!2z6aas5L6G6KW_5Lqe5ZCJ6ZqG5Z2h!5e0!3m2!1szh-TW!2stw!4v1557152896524!5m2!1szh-TW!2stw" allowfullscreen></iframe>
-                    </div>
-                    <div class="col-md-3 py-3">
-                        <h5 class="text-uppercase font-weight-bold">Find Us At</h5>
-                        <a>Cheras Kuala Lumpur</a>
-                    </div>
-    
-                    <!-- <hr class="clearfix w-100 d-md-none pb-3"> -->
-    
-                    <div class="col-md-3 py-3">
-                        <h5 class="text-uppercase font-weight-bold">Contact Us</h5>
-                        <a>Tele: 03-21400000</a>
-                        <br>
-                        <a>E-mail: zhe6289@gmail.com</a>
-                    </div>
-                    <div class="col-md-3 py-3">
-                        <h5 class="text-uppercase font-weight-bold">Service</h5>
-                        <a href="shop.html">Our Product</a>
-                        <br>
-                        <a href="service.html">More Service</a>
-                    </div>
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-3">
+                    <iframe class="w-100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127482.66722761809!2d101.61694869747974!3d3.1386749707281956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49c701efeae7%3A0xf4d98e5b2f1c287d!2z6aas5L6G6KW_5Lqe5ZCJ6ZqG5Z2h!5e0!3m2!1szh-TW!2stw!4v1557152896524!5m2!1szh-TW!2stw"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="col-md-3 py-3">
+                    <h5 class="text-uppercase font-weight-bold">Find Us At</h5>
+                    <a>Cheras Kuala Lumpur</a>
+                </div>
+
+                <!-- <hr class="clearfix w-100 d-md-none pb-3"> -->
+
+                <div class="col-md-3 py-3">
+                    <h5 class="text-uppercase font-weight-bold">Contact Us</h5>
+                    <a>Tele: 03-21400000</a>
+                    <br>
+                    <a>E-mail: zhe6289@gmail.com</a>
+                </div>
+                <div class="col-md-3 py-3">
+                    <h5 class="text-uppercase font-weight-bold">Service</h5>
+                    <a href="shop.html">Our Product</a>
+                    <br>
+                    <a href="service.html">More Service</a>
                 </div>
             </div>
-            <div class="footer-copyright text-center py-3 bg-dark">
-                © 2019 Copyright
-                <a href="index.html"> Friendship Stationary</a>
-            </div>
-        </footer>
-    
+        </div>
+        <div class="footer-copyright text-center py-3 bg-dark">
+            © 2019 Copyright
+            <a href="index.html"> Friendship Stationary</a>
+        </div>
+    </footer>
+
 
     <script src="js/jquery-3.4.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/searching.js"></script>
 </body>
 
 </html>
