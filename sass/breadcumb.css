@@ -30,6 +30,7 @@
     color: white;
     line-height: 40px;
     text-align: center;
+    z-index: 2;
 }
 
 .step li span {
@@ -41,7 +42,7 @@
     left: -100px;
 }
 
-.step li:not(:last-child)::before {
+/* .step li:not(:last-child)::before {
     content: "";
     position: absolute;
     top: 0;
@@ -52,19 +53,50 @@
     width: 500%;
     height: 10px;
     background-color: #fa0;
+} */
+
+.step .step-line{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 10px;
+    border-radius: 0;
+    z-index: 0;
+    /* background-color: #fa0; */
 }
 
 .step li.active {
     background-color: #018171;
+    transform: scale(1.3)
 }
 
 .step li.active~li {
     background-color: #ccc;
 }
 
-.step li.active::before,
+/* .step li.active::before,
 .step li.active~li::before {
     background-color: #ccc;
+} */
+.step li:nth-child(1).active ~ .step-line{
+    background-image: linear-gradient(90deg,#ff0,#fa0 0%, #ccc 0%);
+}
+.step li:nth-child(2).active ~ .step-line{
+    background-image: linear-gradient(90deg,#ff0,#fa0 25%, #ccc 25%);
+}
+.step li:nth-child(3).active ~ .step-line{
+    background-image: linear-gradient(90deg,#ff0,#fa0 50%, #ccc 50%);
+}
+.step li:nth-child(4).active ~ .step-line{
+    background-image: linear-gradient(90deg,#ff0,#fa0 75%, #ccc 75%);
+}
+.step li:nth-child(5).active ~ .step-line{
+    background-image: linear-gradient(90deg,#ff0,#fa0 100%, #ccc 100%);
 }
 
 
