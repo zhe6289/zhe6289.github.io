@@ -8,6 +8,7 @@
     <title>FriendShip</title>
     <link rel="stylesheet" href="sass/customize.css">
     <link rel="stylesheet" href="sass/breadcumb.css">
+
 </head>
 
 <body>
@@ -94,7 +95,7 @@
                 </div>
                 <div class="col-md-6 order-1">
                     <h2>Photographing</h2>
-                    
+
                     <p class="d-none d-md-block">
                         We provide high resolution photo that is not blur,grainy or pixelated.
                         To get your photo approved , you will need to follow some guidelines.
@@ -109,8 +110,7 @@
             </div>
             <a href="javascript:;" class="btn btn-info float-right mt-2 step-next">Next</a>
         </div>
-        
-        
+
         <div class="container py-2 clearfix serve-2">
             <div class="row">
                 <div class="col-md-6 order-2 order-md-1">
@@ -177,7 +177,7 @@
 
                     <p class="d-none d-md-block">
                         The passport photo price including service is RM15,
-                        which can be taken immediately (10mins).
+                        which can be taken immediately "10mins".
 
                     </p>
                 </div>
@@ -186,13 +186,6 @@
         </div>
     </div>
 
-    </div>
-
-    <br class="clearfix w-100 ">
-    <br class="clearfix w-100 ">
-    <br class="clearfix w-100 ">
-    <br class="clearfix w-100 ">
-    <br class="clearfix w-100 ">
 
     <footer class="page-footer pt-2 bg-black">
         <div class="container-fluid text-center text-md-left">
@@ -206,8 +199,6 @@
                     <h5 class="text-uppercase font-weight-bold">Find Us At</h5>
                     <a>Cheras Kuala Lumpur</a>
                 </div>
-
-                <!-- <hr class="clearfix w-100 d-md-none pb-3"> -->
 
                 <div class="col-md-3 py-3">
                     <h5 class="text-uppercase font-weight-bold">Contact Us</h5>
@@ -245,59 +236,59 @@
 
             //next
             $(".serve-1 .step-next").on("click", function () {
-                if($(".serve-2").show()){
+                if ($(".serve-2").show()) {
                     $(".container-bread li:nth-child(2)").addClass("active");
                     $(".container-bread li:nth-child(1)").removeClass("active");
                     $(".serve-1").hide();
                 }
             })
             $(".serve-2 .step-next").on("click", function () {
-                if($(".serve-3").show()){
+                if ($(".serve-3").show()) {
                     $(".container-bread li:nth-child(3)").addClass("active");
                     $(".container-bread li:nth-child(2)").removeClass("active");
                     $(".serve-2").hide();
                 }
             })
             $(".serve-3 .step-next").on("click", function () {
-                if($(".serve-4").show()){
+                if ($(".serve-4").show()) {
                     $(".container-bread li:nth-child(4)").addClass("active");
                     $(".container-bread li:nth-child(3)").removeClass("active");
                     $(".serve-3").hide();
                 }
             })
             $(".serve-4 .step-next").on("click", function () {
-                if($(".serve-5").show()){
+                if ($(".serve-5").show()) {
                     $(".container-bread li:nth-child(5)").addClass("active");
                     $(".container-bread li:nth-child(4)").removeClass("active");
                     $(".serve-4").hide();
                 }
             })
-            
+
 
             // prev
             $(".serve-2 .step-prev").on("click", function () {
-                if($(".serve-1").show()){
+                if ($(".serve-1").show()) {
                     $(".container-bread li:nth-child(1)").addClass("active");
                     $(".container-bread li:nth-child(2)").removeClass("active");
                     $(".serve-2").hide();
                 }
             })
             $(".serve-3 .step-prev").on("click", function () {
-                if($(".serve-2").show()){
+                if ($(".serve-2").show()) {
                     $(".container-bread li:nth-child(2)").addClass("active");
                     $(".container-bread li:nth-child(3)").removeClass("active");
                     $(".serve-3").hide();
                 }
             })
             $(".serve-4 .step-prev").on("click", function () {
-                if($(".serve-3").show()){
+                if ($(".serve-3").show()) {
                     $(".container-bread li:nth-child(3)").addClass("active");
                     $(".container-bread li:nth-child(4)").removeClass("active");
                     $(".serve-4").hide();
                 }
             })
             $(".serve-5 .step-prev").on("click", function () {
-                if($(".serve-4").show()){
+                if ($(".serve-4").show()) {
                     $(".container-bread li:nth-child(4)").addClass("active");
                     $(".container-bread li:nth-child(5)").removeClass("active");
                     $(".serve-5").hide();
