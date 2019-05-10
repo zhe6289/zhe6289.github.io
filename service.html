@@ -87,7 +87,7 @@
             </ul>
         </div>
 
-        <div class="container py-2 clearfix ">
+        <div class="container py-2 clearfix serve-1">
             <div class="row">
                 <div class="col-md-6 order-2 order-md-1">
                     <img src="images/photograph.jpg" alt="" class="w-100">
@@ -107,11 +107,94 @@
                     </p>
                 </div>
             </div>
-            <a href="service-2.html" class="btn btn-info float-right mt-2">Next</a>
+            <a href="javascript:;" class="btn btn-info float-right mt-2 step-next">Next</a>
+        </div>
+        
+        
+        <div class="container py-2 clearfix serve-2">
+            <div class="row">
+                <div class="col-md-6 order-2 order-md-1">
+                    <img src="images/edit.jpg" alt="" class="w-100">
+                </div>
+                <div class="col-md-6 order-1">
+                    <h2>PhotoEdit</h2>
+
+                    <p class="d-none d-md-block">
+                        After done taking a passport photo , before printing it out
+                        we upload to our computer
+                        and creating a passport size photo plus editing photo service.
+                        The editing-service provides beauty and whitening.
+                    </p>
+                </div>
+            </div>
+            <a href="javascript:;" class="btn btn-info float-left mt-2 step-prev">Prev</a>
+            <a href="javascript:;" class="btn btn-info float-right mt-2 step-next">Next</a>
+        </div>
+
+        <div class="container py-2 clearfix serve-3">
+            <div class="row">
+                <div class="col-md-6 order-2 order-md-1">
+                    <img src="images/printing.jpg" alt="" class="w-100">
+                </div>
+                <div class="col-md-6 order-1">
+                    <h2>Printing</h2>
+
+                    <p class="d-none d-md-block">
+                        When your photo is ready to print,
+                        we using matte or glossy photo paper for the good quality to print.
+                        Fast 12-second print, high-quality, and large-headed photo.
+                    </p>
+                </div>
+            </div>
+            <a href="javascript:;" class="btn btn-info float-left mt-2 step-prev">Prev</a>
+            <a href="javascript:;" class="btn btn-info float-right mt-2 step-next">Next</a>
+        </div>
+
+        <div class="container py-2 clearfix serve-4">
+            <div class="row">
+                <div class="col-md-6 order-2 order-md-1">
+                    <img src="images/cut&crop.jpg" alt="" class="w-100">
+                </div>
+                <div class="col-md-6 order-1">
+                    <h2>Crop & Cut</h2>
+
+                    <p class="d-none d-md-block">
+                        We provide croping and cutting service and bring them to 8 pieces of copy.
+                    </p>
+                </div>
+            </div>
+            <a href="javascript:;" class="btn btn-info float-left mt-2 step-prev">Prev</a>
+            <a href="javascript:;" class="btn btn-info float-right mt-2 step-next">Next</a>
+        </div>
+
+        <div class="container py-2 clearfix serve-5">
+            <div class="row">
+                <div class="col-md-6 order-2 order-md-1">
+                    <img src="images/Done.png" alt="" class="w-100">
+                </div>
+                <div class="col-md-6 order-1">
+                    <h2>Done</h2>
+
+                    <p class="d-none d-md-block">
+                        The passport photo price including service is RM15,
+                        which can be taken immediately (10mins).
+
+                    </p>
+                </div>
+            </div>
+            <a href="javascript:;" class="btn btn-info float-left mt-2 step-prev">Prev</a>
         </div>
     </div>
 
-    <footer class="page-footer pt-2 bg-black ">
+    </div>
+
+    <br class="clearfix w-100 ">
+    <br class="clearfix w-100 ">
+    <br class="clearfix w-100 ">
+    <br class="clearfix w-100 ">
+    <br class="clearfix w-100 ">
+
+    <footer class="page-footer pt-2 bg-black">
         <div class="container-fluid text-center text-md-left">
             <div class="row">
                 <div class="col-md-3">
@@ -152,6 +235,77 @@
     <script src="js/jquery-3.4.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/searching.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".serve-2").hide();
+            $(".serve-3").hide();
+            $(".serve-4").hide();
+            $(".serve-5").hide();
+
+            //next
+            $(".serve-1 .step-next").on("click", function () {
+                if($(".serve-2").show()){
+                    $(".container-bread li:nth-child(2)").addClass("active");
+                    $(".container-bread li:nth-child(1)").removeClass("active");
+                    $(".serve-1").hide();
+                }
+            })
+            $(".serve-2 .step-next").on("click", function () {
+                if($(".serve-3").show()){
+                    $(".container-bread li:nth-child(3)").addClass("active");
+                    $(".container-bread li:nth-child(2)").removeClass("active");
+                    $(".serve-2").hide();
+                }
+            })
+            $(".serve-3 .step-next").on("click", function () {
+                if($(".serve-4").show()){
+                    $(".container-bread li:nth-child(4)").addClass("active");
+                    $(".container-bread li:nth-child(3)").removeClass("active");
+                    $(".serve-3").hide();
+                }
+            })
+            $(".serve-4 .step-next").on("click", function () {
+                if($(".serve-5").show()){
+                    $(".container-bread li:nth-child(5)").addClass("active");
+                    $(".container-bread li:nth-child(4)").removeClass("active");
+                    $(".serve-4").hide();
+                }
+            })
+            
+
+            // prev
+            $(".serve-2 .step-prev").on("click", function () {
+                if($(".serve-1").show()){
+                    $(".container-bread li:nth-child(1)").addClass("active");
+                    $(".container-bread li:nth-child(2)").removeClass("active");
+                    $(".serve-2").hide();
+                }
+            })
+            $(".serve-3 .step-prev").on("click", function () {
+                if($(".serve-2").show()){
+                    $(".container-bread li:nth-child(2)").addClass("active");
+                    $(".container-bread li:nth-child(3)").removeClass("active");
+                    $(".serve-3").hide();
+                }
+            })
+            $(".serve-4 .step-prev").on("click", function () {
+                if($(".serve-3").show()){
+                    $(".container-bread li:nth-child(3)").addClass("active");
+                    $(".container-bread li:nth-child(4)").removeClass("active");
+                    $(".serve-4").hide();
+                }
+            })
+            $(".serve-5 .step-prev").on("click", function () {
+                if($(".serve-4").show()){
+                    $(".container-bread li:nth-child(4)").addClass("active");
+                    $(".container-bread li:nth-child(5)").removeClass("active");
+                    $(".serve-5").hide();
+                }
+            })
+
+        })
+    </script>
 </body>
 
 </html>
