@@ -5,7 +5,7 @@
 }
 
 .container-bread {
-    width: 1000px;
+    width: 80%;
     margin: auto;
 }
 
@@ -14,6 +14,7 @@
     margin: 75px auto;
     display: flex;
     justify-content: space-between;
+    /* justify-content: space-around; */
     position: relative;
 }
 
@@ -28,14 +29,12 @@
     text-align: center;
     z-index: 1;
 }
-
-.step li span {
-    display: block;
-    width: 250px;
+.step li i{
+    width: 40px;
+    margin: auto;
+}
+.step li span.step-text{
     color: black;
-    position: absolute;
-    top: 100%;
-    left: -100px;
 }
 
 .step .step-line{
@@ -78,48 +77,28 @@
 }
 
 
-/* @media screen and (min-width: 1200px){
-    .passport-service{
-        height: 100vh;
-    }
- }    */
-@media screen and (max-width: 1199px){
-    .container-bread {
-        width: 610px;
-    }
-    .step li:not(:last-child)::before {
-        width: 300%;
-     }
- }   
-@media screen and (max-width: 766px){
-    .container-bread {
-        width: 500px;
-    }
-    .step li:not(:last-child)::before {
-        width: 280%;
+
+@media screen and (max-width: 991px){
+    .step .step-line{
         height: 8px;
-     }
-    .step li span {
+    }
+    .step li span.step-text{
         font-size: 12px;
     }
  }   
-@media screen and (max-width: 575px){
-    .container-bread {
-        width: 320px;
+@media screen and (max-width: 767px){
+    .step .step-line{
+        height: 5px;
     }
-    .step li:not(:last-child)::before {
-        width: 100%;
+    .step li span.step-text{
+        font-size: 10px;
+    }
+ }   
+@media screen and (max-width: 575px){
+    .step .step-line{
         height: 3px;
-     }
-     .step li span {
+    }
+    .step li span.step-text{
         font-size: 8px;
     }
  }   
-
-
- /* step container */
- /* .serve-1 img,
- .serve-2 img,
- .serve-3 img,
- .serve-4 img,
- .serve-5 img{box-shadow: 2px 2px 5px black} */
