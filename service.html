@@ -47,7 +47,7 @@
             <form class="form-inline my-2 my-lg-0">
                 <input onkeyup="myFunction()" id="myInput" class="form-control mr-sm-2" type="search"
                     placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
                 <ul id="myUL">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="shop.html">Product</a></li>
@@ -117,7 +117,7 @@
                     </p>
                 </div>
             </div>
-            <a href="javascript:;" class="btn btn-info float-right mt-2 step-next">Next</a>
+            <button disabled="disabled" class="btn btn-info float-right mt-2 step-next">Next</button>
         </div>
 
         <div class="container py-2 clearfix serve-2">
@@ -136,8 +136,8 @@
                     </p>
                 </div>
             </div>
-            <a href="javascript:;" class="btn btn-info float-left mt-2 step-prev">Prev</a>
-            <a href="javascript:;" class="btn btn-info float-right mt-2 step-next">Next</a>
+            <button disabled="disabled" class="btn btn-info float-left mt-2 step-prev">Prev</button>
+            <button disabled="disabled" class="btn btn-info float-right mt-2 step-next">Next</button>
         </div>
 
         <div class="container py-2 clearfix serve-3">
@@ -155,8 +155,8 @@
                     </p>
                 </div>
             </div>
-            <a href="javascript:;" class="btn btn-info float-left mt-2 step-prev">Prev</a>
-            <a href="javascript:;" class="btn btn-info float-right mt-2 step-next">Next</a>
+            <button disabled="disabled" class="btn btn-info float-left mt-2 step-prev">Prev</button>
+            <button disabled="disabled" class="btn btn-info float-right mt-2 step-next">Next</button>
         </div>
 
         <div class="container py-2 clearfix serve-4">
@@ -172,8 +172,8 @@
                     </p>
                 </div>
             </div>
-            <a href="javascript:;" class="btn btn-info float-left mt-2 step-prev">Prev</a>
-            <a href="javascript:;" class="btn btn-info float-right mt-2 step-next">Next</a>
+            <button disabled="disabled" class="btn btn-info float-left mt-2 step-prev">Prev</button>
+            <button disabled="disabled" class="btn btn-info float-right mt-2 step-next">Next</button>
         </div>
 
         <div class="container py-2 clearfix serve-5">
@@ -191,7 +191,7 @@
                     </p>
                 </div>
             </div>
-            <a href="javascript:;" class="btn btn-info float-left mt-2 step-prev">Prev</a>
+            <button disabled="disabled" class="btn btn-info float-left mt-2 step-prev">Prev</button>
         </div>
     </div>
 
@@ -237,6 +237,10 @@
     <script src="js/searching.js"></script>
 
     <script>
+        $(window).on("load",function(){
+            $("button").removeAttr("disabled")
+        })
+
         $(document).ready(function () {
             $(".serve-2").hide();
             $(".serve-3").hide();
