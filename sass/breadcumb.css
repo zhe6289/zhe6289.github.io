@@ -12,7 +12,7 @@
 /* title */
 .service-title{
     margin: 15px auto;
-    max-width: 50%;
+    max-width: 70%;
 }
 
 @media screen and (max-width: 767px){
