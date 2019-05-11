@@ -12,10 +12,49 @@
             text-decoration: none;
             color: black;
             margin-bottom: 15px;
+            position: relative;
         }
-
         a.card:hover img {
             opacity: 0.9;
+        }
+        .col-xl-3{
+            position: relative;
+        }
+
+        .col-xl-3 a:before,
+        .col-xl-3 a:after{
+            position: absolute;
+            content: "";
+            transition: all .5s;
+        }
+
+        .col-xl-3 a:before{
+            width: 0;
+            height: 0;
+            left: 0;
+            bottom: 0;
+        }
+
+        .col-xl-3 a:after{
+            width: 0;
+            height: 0;
+            top: 0;
+            right: 0;
+        }
+
+        .col-xl-3 a:hover:before{
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            border-bottom: 1px solid #00000038;
+            border-left: 1px solid #00000038;
+        }
+
+        .col-xl-3 a:hover:after{
+            width: 100%;
+            height: 100%;
+            border-top: 1px solid #00000038;
+            border-right: 1px solid #00000038;
         }
     </style>
 </head>
@@ -70,7 +109,7 @@
         <h1 class="my-3 text-center"> All Items</h1>
         <div class="row">
             <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
-                <a href="#" class="card">
+                <a href="javascript:;" class="card">
                     <img class="card-img-top" src="images/pen1.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Pure Black Pen </h5>
@@ -83,7 +122,7 @@
                 </a>
             </div>
             <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
-                <a href="#" class="card">
+                <a href="javascript:;" class="card">
                     <img class="card-img-top" src="images/pen2.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Rhombic Ball Pen</h5>
@@ -96,7 +135,7 @@
                 </a>
             </div>
             <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
-                <a href="#" class="card">
+                <a href="javascript:;" class="card">
                     <img class="card-img-top" src="images/pen3.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Pear Wood Pen</h5>
@@ -109,7 +148,7 @@
                 </a>
             </div>
             <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
-                <a href="#" class="card">
+                <a href="javascript:;" class="card">
                     <img class="card-img-top" src="images/pen4.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Parquet Pen</h5>
@@ -123,7 +162,7 @@
                 </a>
             </div>
             <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
-                <a href="#" class="card">
+                <a href="javascript:;" class="card">
                     <img class="card-img-top" src="images/pen5.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Idea Matte silver</h5>
@@ -137,7 +176,7 @@
                 </a>
             </div>
             <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
-                <a href="#" class="card">
+                <a href="javascript:;" class="card">
                     <img class="card-img-top" src="images/pen6.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Idea Turkish green</h5>
@@ -151,7 +190,7 @@
                 </a>
             </div>
             <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
-                <a href="#" class="card">
+                <a href="javascript:;" class="card">
                     <img class="card-img-top" src="images/pen7.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Idea Flour Orange</h5>
@@ -165,7 +204,7 @@
                 </a>
             </div>
             <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
-                <a href="#" class="card">
+                <a href="javascript:;" class="card">
                     <img class="card-img-top" src="images/pen8.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Pencil-HB</h5>
@@ -178,7 +217,7 @@
                 </a>
             </div>
             <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
-                <a href="#" class="card">
+                <a href="javascript:;" class="card">
                     <img class="card-img-top" src="images/pen9.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Perfect Pencil</h5>
@@ -191,7 +230,7 @@
                 </a>
             </div>
             <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
-                <a href="#" class="card">
+                <a href="javascript:;" class="card">
                     <img class="card-img-top" src="images/ass1.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Eraser(Clay)</h5>
@@ -205,7 +244,7 @@
                 </a>
             </div>
             <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
-                <a href="#" class="card">
+                <a href="javascript:;" class="card">
                     <img class="card-img-top" src="images/ass2.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">L-hanging plastic wipe</h5>
@@ -220,7 +259,7 @@
                 </a>
             </div>
             <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
-                <a href="#" class="card">
+                <a href="javascript:;" class="card">
                     <img class="card-img-top" src="images/ass3.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">FaberCastel Clay</h5>
@@ -233,7 +272,7 @@
                 </a>
             </div>
             <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
-                <a href="#" class="card">
+                <a href="javascript:;" class="card">
                     <img class="card-img-top" src="images/ass4.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">FaberCastel Clay(Blue)</h5>
@@ -246,7 +285,7 @@
                 </a>
             </div>
             <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
-                <a href="#" class="card">
+                <a href="javascript:;" class="card">
                     <img class="card-img-top" src="images/ass5.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Pen Holder</h5>
@@ -260,7 +299,7 @@
                 </a>
             </div>
             <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
-                <a href="#" class="card">
+                <a href="javascript:;" class="card">
                     <img class="card-img-top" src="images/ass6.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Pen Holder</h5>
@@ -274,7 +313,7 @@
                 </a>
             </div>
             <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
-                <a href="#" class="card">
+                <a href="javascript:;" class="card">
                     <img class="card-img-top" src="images/ass7.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Eraser Filter</h5>
@@ -291,7 +330,7 @@
                 </a>
             </div>
             <div class="col-xl-3 col-lg-4 col-sm-6 text-center">
-                <a href="#" class="card">
+                <a href="javascript:;" class="card">
                     <img class="card-img-top" src="images/ass8.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Pencil Gift Box</h5>
