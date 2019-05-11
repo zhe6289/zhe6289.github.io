@@ -14,6 +14,18 @@ body {
     }
 }
 
+//title-text
+.title{
+    min-width:500px; 
+    margin: 50px auto;
+}
+
+@media screen and (max-width:575px){
+    .title h1{  
+        font-size: 30px;
+    }
+}
+
 //paragraph title
 .para-title{
     max-width:500px;
