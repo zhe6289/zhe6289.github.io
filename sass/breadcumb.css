@@ -9,6 +9,24 @@
     margin: auto;
 }
 
+/* title */
+.service-title{
+    margin: 15px auto;
+    max-width: 50%;
+}
+
+@media screen and (max-width: 767px){
+    .service-title h1{
+        font-size: 35px;
+    }
+ }
+@media screen and (max-width: 575px){
+    .service-title h1{
+        font-size: 30px;
+    }
+ }
+
+/* step */
 .step {
     width: 100%;
     margin: 75px auto;
@@ -102,3 +120,12 @@
         font-size: 8px;
     }
  }   
+
+ /* container-serve */
+ .serve-1,
+ .serve-2,
+ .serve-3,
+ .serve-4,
+ .serve-5{
+     width: 80%;
+ }
