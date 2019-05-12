@@ -106,7 +106,7 @@
         </div>
 
 
-        <div class="container py-2 clearfix serve-1">
+        <div class="container py-2 clearfix serve">
             <div class="row">
                 <div class="col-md-6 order-2 order-md-1">
                     <img src="images/photograph.jpg" alt="" class="w-100">
@@ -129,7 +129,7 @@
             <button disabled="disabled" class="btn btn-info float-right mt-2 step-next">Next</button>
         </div>
 
-        <div class="container py-2 clearfix serve-2">
+        <div class="container py-2 clearfix serve">
             <div class="row">
                 <div class="col-md-6 order-2 order-md-1">
                     <img src="images/edit.jpg" alt="" class="w-100">
@@ -149,7 +149,7 @@
             <button disabled="disabled" class="btn btn-info float-right mt-2 step-next">Next</button>
         </div>
 
-        <div class="container py-2 clearfix serve-3">
+        <div class="container py-2 clearfix serve">
             <div class="row">
                 <div class="col-md-6 order-2 order-md-1">
                     <img src="images/printing.jpg" alt="" class="w-100">
@@ -168,7 +168,7 @@
             <button disabled="disabled" class="btn btn-info float-right mt-2 step-next">Next</button>
         </div>
 
-        <div class="container py-2 clearfix serve-4">
+        <div class="container py-2 clearfix serve">
             <div class="row">
                 <div class="col-md-6 order-2 order-md-1">
                     <img src="images/cut&crop.jpg" alt="" class="w-100">
@@ -185,7 +185,7 @@
             <button disabled="disabled" class="btn btn-info float-right mt-2 step-next">Next</button>
         </div>
 
-        <div class="container py-2 clearfix serve-5">
+        <div class="container py-2 clearfix serve">
             <div class="row">
                 <div class="col-md-6 order-2 order-md-1">
                     <img src="images/Done.jpg" alt="" class="w-100">
@@ -206,8 +206,8 @@
 
 
     <footer class="page-footer pt-2 bg-black">
-        <div class="container-fluid text-center text-md-left">
-            <div class="row">
+        <div class="container-fluid text-md-left">
+            <div class="row w-75 mx-auto">
                 <div class="col-md-4 py-3">
                     <h5 class="text-uppercase font-weight-bold">Find Us At</h5>
                     <a href="javascript:;">Cheras Kuala Lumpur</a>
@@ -239,6 +239,7 @@
     <script src="js/jquery-3.4.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/searching.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.compatibility.min.js"></script>
 
     <script>
         $(window).on("load",function(){
@@ -246,72 +247,38 @@
         })
 
         $(document).ready(function () {
-            $(".serve-2").hide();
-            $(".serve-3").hide();
-            $(".serve-4").hide();
-            $(".serve-5").hide();
 
-            //next
-            $(".serve-1 .step-next").on("click", function () {
-                if ($(".serve-2").show()) {
-                    $(".container-bread li:nth-child(2)").addClass("active");
-                    $(".container-bread li:nth-child(1)").removeClass("active");
-                    $(".serve-1").hide();
-                }
-            })
-            $(".serve-2 .step-next").on("click", function () {
-                if ($(".serve-3").show()) {
-                    $(".container-bread li:nth-child(3)").addClass("active");
-                    $(".container-bread li:nth-child(2)").removeClass("active");
-                    $(".serve-2").hide();
-                }
-            })
-            $(".serve-3 .step-next").on("click", function () {
-                if ($(".serve-4").show()) {
-                    $(".container-bread li:nth-child(4)").addClass("active");
-                    $(".container-bread li:nth-child(3)").removeClass("active");
-                    $(".serve-3").hide();
-                }
-            })
-            $(".serve-4 .step-next").on("click", function () {
-                if ($(".serve-5").show()) {
-                    $(".container-bread li:nth-child(5)").addClass("active");
-                    $(".container-bread li:nth-child(4)").removeClass("active");
-                    $(".serve-4").hide();
-                }
+            var current_fs, next_fs, previous_fs;
+            var left,opacity,scale;
+            var animating;
+
+            $(".step-next").on("click",function(){
+
+                current_fs = $(this).parent();
+                next_fs = $(this).parent().next();
+
+                $( ".step li" ).eq($(".serve").index(next_fs)).addClass("active");
+                $( ".step li" ).eq($(".serve").index(current_fs)).removeClass("active");
+
+                next_fs.show();
+                current_fs.hide()
             })
 
+            $(".step-prev").on("click",function(){
 
-            // prev
-            $(".serve-2 .step-prev").on("click", function () {
-                if ($(".serve-1").show()) {
-                    $(".container-bread li:nth-child(1)").addClass("active");
-                    $(".container-bread li:nth-child(2)").removeClass("active");
-                    $(".serve-2").hide();
-                }
-            })
-            $(".serve-3 .step-prev").on("click", function () {
-                if ($(".serve-2").show()) {
-                    $(".container-bread li:nth-child(2)").addClass("active");
-                    $(".container-bread li:nth-child(3)").removeClass("active");
-                    $(".serve-3").hide();
-                }
-            })
-            $(".serve-4 .step-prev").on("click", function () {
-                if ($(".serve-3").show()) {
-                    $(".container-bread li:nth-child(3)").addClass("active");
-                    $(".container-bread li:nth-child(4)").removeClass("active");
-                    $(".serve-4").hide();
-                }
-            })
-            $(".serve-5 .step-prev").on("click", function () {
-                if ($(".serve-4").show()) {
-                    $(".container-bread li:nth-child(4)").addClass("active");
-                    $(".container-bread li:nth-child(5)").removeClass("active");
-                    $(".serve-5").hide();
-                }
+                current_fs = $(this).parent();
+            	previous_fs = $(this).parent().prev();
+
+                $( ".step li" ).eq($(".serve").index(current_fs)).removeClass("active");
+                $( ".step li" ).eq($(".serve").index(previous_fs)).addClass("active");
+
+                previous_fs.show()
+                current_fs.hide()
             })
 
+            // $(".submit").click(function(){
+            //     return false;
+            // })
         })
     </script>
 </body>
