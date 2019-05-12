@@ -8,18 +8,19 @@
     <title>FriendShip</title>
     <link rel="stylesheet" href="sass/customize.css">
     <link rel="stylesheet" href="sass/breadcumb.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="animated/animated.css">
 
     <style>
-        .page-footer a{
+        .page-footer a {
             text-decoration: none;
             color: #d8d8d8;
         }
-        .page-footer a:hover{
+
+        .page-footer a:hover {
             color: #ffffff;
         }
-        
-        
     </style>
 </head>
 
@@ -239,41 +240,43 @@
     <script src="js/jquery-3.4.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/searching.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.compatibility.min.js"></script>
 
     <script>
-        $(window).on("load",function(){
+        $(window).on("load", function () {
             $("button").removeAttr("disabled")
         })
 
         $(document).ready(function () {
 
             var current_fs, next_fs, previous_fs;
-            var left,opacity,scale;
+            var left, opacity, scale;
             var animating;
 
-            $(".step-next").on("click",function(){
+            $(".step-next").on("click", function () {
 
                 current_fs = $(this).parent();
                 next_fs = $(this).parent().next();
 
-                $( ".step li" ).eq($(".serve").index(next_fs)).addClass("active");
-                $( ".step li" ).eq($(".serve").index(current_fs)).removeClass("active");
+                $(".step li").eq($(".serve").index(next_fs)).addClass("active");
+                $(".step li").eq($(".serve").index(current_fs)).removeClass("active");
 
-                next_fs.show();
+                next_fs.show().removeClass("slideInLeft slideInRight").addClass("animated slideInRight");
                 current_fs.hide()
-            })
+            });
 
-            $(".step-prev").on("click",function(){
+            $(".step-prev").on("click", function () {
+                
+                animating = true;
 
                 current_fs = $(this).parent();
-            	previous_fs = $(this).parent().prev();
+                previous_fs = $(this).parent().prev();
 
-                $( ".step li" ).eq($(".serve").index(current_fs)).removeClass("active");
-                $( ".step li" ).eq($(".serve").index(previous_fs)).addClass("active");
+                $(".step li").eq($(".serve").index(current_fs)).removeClass("active");
+                $(".step li").eq($(".serve").index(previous_fs)).addClass("active");
 
-                previous_fs.show()
-                current_fs.hide()
+                previous_fs.show().removeClass("slideInLeft slideInRight").addClass("animated slideInLeft");
+                current_fs.hide();
+                return false
             })
 
             // $(".submit").click(function(){
