@@ -10,62 +10,30 @@
     <link rel="stylesheet" href="owl/css/owl.carousel.css">
     <link rel="stylesheet" href="owl/css/owl.theme.default.css">
     <link rel="stylesheet" href="sass/home.css">
+    <link rel="stylesheet" href="sass/nav.css">
 </head>
 
 <body>
-    
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="shop.html" id="navbarDropdown" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Shop
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="shop-pens.html">Pens</a>
-                        <a class="dropdown-item" href="shop-accessories.html">Accessories</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="shop.html">All Items</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="service.html">Service</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://eugene-work.firebaseapp.com/" target="_blank">Contact</a>
-                </li>
+    <nav class="sticky-top">
+        <div class="logo">
+            Friendship Stationary
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="https://eugene-work.firebaseapp.com/" target="_blank">Contact</a></li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input onkeyup="myFunction()" id="myInput" class="form-control mr-sm-2" type="search"
-                    placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
-                <ul id="myUL">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Product</a></li>
-                    <li><a href="shop-pens.html">Pen</a></li>
-                    <li><a href="shop-accessories.html">Accessories</a></li>
-                    <li><a href="service.html">Service</a></li>
-                    <li><a href="https://www.facebook.com/yuzhe.chua.7" target="_blank">Contact</a></li>
-                </ul>
-            </form>
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
         </div>
     </nav>
-    <div class="title text-center">
-        <h1>Friendship Stationary</h1>
-    </div>
 
-    <nav class="container mt-1">
-
-
+    <div class="container mt-1">
         <div class="owl-carousel owl-theme">
             <img src="images/banner1-edited.jpg" alt="">
             <a href="service.html" target="_blank">
@@ -75,14 +43,15 @@
                 <img src="images/banner3-edited.jpg" alt="">
             </a>
         </div>
-    </nav>
+    </div>
 
     <div class="para-title">
         <h2>8 best online shops for stationery addicts</h5>
             <br>
             <p>Written by
                 <br>
-                <a target="_blank" href="https://www.creativeboom.com/features/22-awesome-online-shops-for-stationery-addicts/">
+                <a target="_blank"
+                    href="https://www.creativeboom.com/features/22-awesome-online-shops-for-stationery-addicts/">
                     Sarah McHugh
                 </a>
 
@@ -245,6 +214,7 @@
     <script src="js/searching.js"></script>
     <script src="js/scroll.js"></script>
     <script>
+       
         $(document).ready(function () {
             $('.owl-carousel').owlCarousel({
                 loop: true,
@@ -258,6 +228,49 @@
                     }
                 }
             })
+
+            $(window).on('resize',function(){
+                $("body").addClass("stop-all-transition");
+
+                setTimeout(function() {
+                    $('body').removeClass('stop-all-transition');
+                }, 10);
+             });
+
+            $(".burger").on("click",function(e){
+                e.preventDefault();
+                $("nav ul").toggleClass("nav-active");
+                
+                
+                $("nav ul li").css("animation","navLinkFade 0.5s ease forwards 0.2s");
+
+                $(".burger").toggleClass('toggle');
+            })
+
+
+            // var navSlide = function () {
+            //     var burger = document.querySelector('.burger');
+            //     var nav = document.querySelector('nav ul');
+            //     var navLinks = document.querySelectorAll('nav ul li')
+
+            //     burger.addEventListener('click', function () {
+            //         //toggle nav
+
+            //         nav.classList.toggle('nav-active');
+            //         // animate links
+            //         navLinks.forEach(function (e) {
+            //             console.log(e)
+            //             if (e.style.animation) {
+            //                 e.style.animation = '';
+            //             } else {
+            //                 e.style.animation = `navLinkFade 0.5s ease forwards 0.2s`;
+            //             }
+            //         });
+            //         //burger
+            //         burger.classList.toggle('toggle');
+            //     });
+            // }
+            // navSlide();
         })
     </script>
 
