@@ -214,7 +214,7 @@
     <script src="js/searching.js"></script>
     <script src="js/scroll.js"></script>
     <script>
-       
+
         $(document).ready(function () {
             $('.owl-carousel').owlCarousel({
                 loop: true,
@@ -229,48 +229,45 @@
                 }
             })
 
-            $(window).on('resize',function(){
+            $(window).on('resize', function () {
                 $("body").addClass("stop-all-transition");
 
-                setTimeout(function() {
+                setTimeout(function () {
                     $('body').removeClass('stop-all-transition');
                 }, 10);
-             });
+            });
 
-            $(".burger").on("click",function(e){
-                e.preventDefault();
-                $("nav ul").toggleClass("nav-active");
-                
-                
-                $("nav ul li").css("animation","navLinkFade 0.5s ease forwards 0.2s");
+            // $(".burger").on("click",function(){
+            //     $("nav ul").toggleClass("nav-active");
 
-                $(".burger").toggleClass('toggle');
-            })
+            //     $("nav ul li").css("animation","navLinkFade 0.5s ease forwards 0.2s");
+
+            //     $(".burger").toggleClass('toggle');
+            // })
 
 
-            // var navSlide = function () {
-            //     var burger = document.querySelector('.burger');
-            //     var nav = document.querySelector('nav ul');
-            //     var navLinks = document.querySelectorAll('nav ul li')
+            var navSlide = function () {
+                var burger = document.querySelector('.burger');
+                var nav = document.querySelector('nav ul');
+                var navLinks = document.querySelectorAll('nav ul li')
 
-            //     burger.addEventListener('click', function () {
-            //         //toggle nav
+                burger.addEventListener('click', function () {
+                    //toggle nav
 
-            //         nav.classList.toggle('nav-active');
-            //         // animate links
-            //         navLinks.forEach(function (e) {
-            //             console.log(e)
-            //             if (e.style.animation) {
-            //                 e.style.animation = '';
-            //             } else {
-            //                 e.style.animation = `navLinkFade 0.5s ease forwards 0.2s`;
-            //             }
-            //         });
-            //         //burger
-            //         burger.classList.toggle('toggle');
-            //     });
-            // }
-            // navSlide();
+                    nav.classList.toggle('nav-active');
+                    // animate links
+                    navLinks.forEach(function (link, index) {
+                        if (link.style.animation) {
+                            link.style.animation = '';
+                        } else {
+                            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
+                        }
+                    });
+                    //burger
+                    burger.classList.toggle('toggle');
+                });
+            }
+            navSlide();
         })
     </script>
 
