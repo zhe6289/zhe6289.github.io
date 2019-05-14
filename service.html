@@ -264,13 +264,17 @@
                 $(".step li").eq($(".serve").index(next_fs)).addClass("active");
                 $(".step li").eq($(".serve").index(current_fs)).removeClass("active");
 
-                next_fs.show().removeClass("slideInLeft slideInRight").addClass("animated slideInRight");
+                if($(window).width() <= 576 ){
+                    next_fs.show().removeClass("slideInLeft slideInRight").addClass("animated bounceIn");
+                }else{
+                    next_fs.show().removeClass("slideInLeft slideInRight").addClass("animated slideInRight");
+                }
+                
                 current_fs.hide()
             });
 
             $(".step-prev").on("click", function () {
                 
-                animating = true;
 
                 current_fs = $(this).parent();
                 previous_fs = $(this).parent().prev();
@@ -278,7 +282,11 @@
                 $(".step li").eq($(".serve").index(current_fs)).removeClass("active");
                 $(".step li").eq($(".serve").index(previous_fs)).addClass("active");
 
-                previous_fs.show().removeClass("slideInLeft slideInRight").addClass("animated slideInLeft");
+                if($(window).width()<=576){
+                    previous_fs.show().removeClass("slideInLeft slideInRight").addClass("animated bounceIn");
+                }else{
+                    previous_fs.show().removeClass("slideInLeft slideInRight").addClass("animated slideInLeft");
+                }
                 current_fs.hide();
                 return false
             })

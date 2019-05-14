@@ -66,8 +66,8 @@ nav .burger div {
     nav .burger {
         display: block;
         cursor: pointer;
-        padding-top: 8px;
-        padding-right: 8px;
+        align-self: center;
+        margin-right: 15px;
     }
 
     nav ul {
@@ -82,7 +82,7 @@ nav .burger div {
         align-items: center;
         transition: all 0.3s ease-in;
         z-index: 2;
-        opacity: 0;
+        transform: translateX(100%);
     }
 
     nav ul li {
@@ -91,7 +91,7 @@ nav .burger div {
 }
 
 .nav-active {
-    opacity: 1;
+    transform: translateX(0);
 }
 
 @keyframes navLinkFade {

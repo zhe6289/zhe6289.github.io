@@ -237,37 +237,46 @@
                 }, 10);
             });
 
-            // $(".burger").on("click",function(){
-            //     $("nav ul").toggleClass("nav-active");
+            $(".burger").on("click",function(){
+                $("nav ul").toggleClass("nav-active");
 
-            //     $("nav ul li").css("animation","navLinkFade 0.5s ease forwards 0.2s");
+                // $("nav ul li").css("animation","navLinkFade 0.5s ease forwards 0.2s");
+                $("nav ul li").each(function(index){
+                    console.log(this.style.animation)
+                    if(this.style.animation){
+                        this.style.animation = "";
+                    }else{
+                        this.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
+                    }
+                })
 
-            //     $(".burger").toggleClass('toggle');
-            // })
+                $(".burger").toggleClass('toggle');
+            })
 
 
-            var navSlide = function () {
-                var burger = document.querySelector('.burger');
-                var nav = document.querySelector('nav ul');
-                var navLinks = document.querySelectorAll('nav ul li')
+            // var navSlide = function () {
+            //     var burger = document.querySelector('.burger');
+            //     var nav = document.querySelector('nav ul');
+            //     var navLinks = document.querySelectorAll('nav ul li')
 
-                burger.addEventListener('click', function () {
-                    //toggle nav
+            //     burger.addEventListener('click', function () {
+            //         //toggle nav
 
-                    nav.classList.toggle('nav-active');
-                    // animate links
-                    navLinks.forEach(function (link, index) {
-                        if (link.style.animation) {
-                            link.style.animation = '';
-                        } else {
-                            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
-                        }
-                    });
-                    //burger
-                    burger.classList.toggle('toggle');
-                });
-            }
-            navSlide();
+            //         nav.classList.toggle('nav-active');
+            //         // animate links
+            //         navLinks.forEach(function (link, index) {
+            //             console.log(link)
+            //             if (link.style.animation) {
+            //                 link.style.animation = '';
+            //             } else {
+            //                 // link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
+            //             }
+            //         });
+            //         //burger
+            //         burger.classList.toggle('toggle');
+            //     });
+            // }
+            // navSlide();
         })
     </script>
 
