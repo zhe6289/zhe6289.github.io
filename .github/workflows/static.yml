@@ -18,28 +18,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  check_runner:
-    runs-on: ubuntu-latest
-    outputs:
-      is_correct_user: ${{ steps.check_user.outputs.is_correct_user }}
-    steps:
-      - id: check_user
-        name: Check if the runner is the correct user
-        run: |
-          if [ "${{ github.actor }}" = "YourGitHubUsername" ]; then
-            echo "::set-output name=is_correct_user::true"
-          else
-            echo "::set-output name=is_correct_user::false"
-            exit 1
-          fi
   deploy:
-    needs: check_runner
-    if: needs.check_runner.outputs.is_correct_user == 'true'
     runs-on: ubuntu-latest
     environment:
-      name: stage
+      name: Production  # 您创建的环境名称
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
