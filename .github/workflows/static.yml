@@ -1,38 +1,41 @@
 name: Deploy to GitHub Pages
 
 on:
-  workflow_dispatch:
+  push:
+    branches: ["master"]  # 自動觸發部署到 Stage 環境的工作流
+  workflow_dispatch:       # 允許手動觸發工作流
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
-concurrency:
-  group: pages
-  cancel-in-progress: false
-
 jobs:
-  deploy:
+  deploy-to-stage:
+    runs-on: ubuntu-latest
+    environment:
+      name: Stage
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      # 省略了構建步驟
+      - name: Deploy to Stage Environment
+        run: echo "Deploying to Stage environment" # 替換為實際部署到 Stage 的命令
+
+  deploy-to-production:
+    needs: deploy-to-stage
+    if: ${{ github.event_name == 'workflow_dispatch' }}
     runs-on: ubuntu-latest
     environment:
       name: Production
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      # 添加你的構建和測試步驟
-      # - name: Build and Test
-      #   run: your-build-and-test-scripts
-
       - name: Setup Pages
         uses: actions/configure-pages@v4
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
           path: '.'
-
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v3
