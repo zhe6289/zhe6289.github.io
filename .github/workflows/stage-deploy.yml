@@ -1,0 +1,22 @@
+name: Deploy to Stage
+
+on:
+  push:
+    branches: ["master"]
+
+jobs:
+  deploy-to-stage:
+    runs-on: ubuntu-latest
+    environment:
+      name: Stage
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: '.'
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v3
